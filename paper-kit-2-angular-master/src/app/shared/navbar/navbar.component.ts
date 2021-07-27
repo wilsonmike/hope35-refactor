@@ -9,6 +9,7 @@ import { Location, LocationStrategy, PathLocationStrategy } from '@angular/commo
 export class NavbarComponent implements OnInit {
     private toggleButton: any;
     private sidebarVisible: boolean;
+    activateHideLogo: any;
 
     constructor(public location: Location, private element : ElementRef) {
         this.sidebarVisible = false;
@@ -69,6 +70,13 @@ export class NavbarComponent implements OnInit {
         }
         else {
             return false;
+        }
+    }
+    activateHide() {
+        if (window.scrollY > 1) {
+            this.activateHideLogo = true;
+        } else {
+            this.activateHideLogo = false;
         }
     }
 }

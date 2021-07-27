@@ -2,7 +2,8 @@
     margin-bottom: 0;
 }
 .page-header{
-    background-color: #B2AFAB;
+    background-color: #ffffff;
+    opacity: 70%;
     background-position: center center;
     background-size: cover;
     min-height: 100vh;
@@ -23,7 +24,8 @@
     -ms-flex-pack: center;
 
     .filter::after{
-        background-color: rgba(0, 0, 0, 0.5);
+        background-color: rgba(0, 0, 0, 0.33);
+        opacity: 100%;
         content: "";
         display: block;
         height: 100%;
