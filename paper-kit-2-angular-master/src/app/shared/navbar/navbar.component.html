@@ -34,20 +34,17 @@
             target="_blank"
           >
             <p>Home</p>
-            <p class="d-lg-none">Home</p>
           </a>
         </li>
         <li class="nav-item" *ngIf="!isDocumentation()">
           <a
             class="nav-link"
             rel="tooltip"
-            title="Like us on Facebook"
+            title="See your photos here"
             data-placement="bottom"
-            href="https://www.facebook.com/CreativeTim"
-            target="_blank"
+            routerLink="/familyfriends"
           >
             <p>Family & Friends</p>
-            <p class="d-lg-none">Facebook</p>
           </a>
         </li>
         <li class="nav-item" *ngIf="!isDocumentation()">
@@ -60,7 +57,6 @@
             target="_blank"
           >
             <p>About</p>
-            <p class="d-lg-none">Instagram</p>
           </a>
         </li>
         <li class="nav-item" *ngIf="isHome()">
@@ -68,7 +64,7 @@
             href="https://www.creative-tim.com/product/paper-kit-2-pro-angular?ref=pk2-angular-free-local"
             target="_blank"
             class="btn btn-round"
-            >Upgrade to Pro</a
+            >Get Started</a
           >
         </li>
         <li class="nav-item" *ngIf="!isHome()">
