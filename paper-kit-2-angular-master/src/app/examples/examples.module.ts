@@ -8,6 +8,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { SignupComponent } from './signup/signup.component';
 import { HopehomeComponent } from './hopehome/hopehome.component';
 import { FamilyfriendsComponent } from './familyfriends/familyfriends.component';
+import { GetstartedComponent } from './getstarted/getstarted.component';
 
 @NgModule({
     imports: [
@@ -20,7 +21,8 @@ import { FamilyfriendsComponent } from './familyfriends/familyfriends.component'
         SignupComponent,
         ProfileComponent,
         HopehomeComponent,
-        FamilyfriendsComponent
+        FamilyfriendsComponent,
+        GetstartedComponent
     ]
 })
 export class ExamplesModule { }
