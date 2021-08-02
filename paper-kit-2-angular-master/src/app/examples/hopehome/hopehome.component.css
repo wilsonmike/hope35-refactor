@@ -14,8 +14,13 @@
 .arrow-container {
   align-items: center;
   text-align: center;
+  background-color: #eeeeee;
 }
 .down-arrow {
   height: 50px;
   width: 50px;
+  cursor: pointer;
+}
+.cont-lightgray {
+  background-color: antiquewhite;
 }
