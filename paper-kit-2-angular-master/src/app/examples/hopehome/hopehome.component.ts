@@ -1,15 +1,16 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit } from "@angular/core";
 
 @Component({
-  selector: 'app-hopehome',
-  templateUrl: './hopehome.component.html',
-  styleUrls: ['./hopehome.component.css']
+  selector: "app-hopehome",
+  templateUrl: "./hopehome.component.html",
+  styleUrls: ["./hopehome.component.css"],
 })
 export class HopehomeComponent implements OnInit {
+  constructor() {}
 
-  constructor() { }
+  ngOnInit(): void {}
 
-  ngOnInit(): void {
+  scroll(el: HTMLElement) {
+    el.scrollIntoView();
   }
-
 }

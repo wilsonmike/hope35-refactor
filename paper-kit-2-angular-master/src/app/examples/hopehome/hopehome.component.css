@@ -4,3 +4,18 @@
 .title {
   color: #5680a0;
 }
+.button-blue {
+  border-color: #5680a0;
+  color: #5680a0;
+}
+.icon {
+  color: #5680a0;
+}
+.arrow-container {
+  align-items: center;
+  text-align: center;
+}
+.down-arrow {
+  height: 50px;
+  width: 50px;
+}
