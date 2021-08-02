@@ -15,8 +15,12 @@ const routes: Routes = [
   { path: "", redirectTo: "home", pathMatch: "full" },
   { path: "home", component: HopehomeComponent },
   { path: "familyfriends", component: FamilyfriendsComponent },
+
+  { path: "profile", component: ProfileComponent },
+  // { path: "familyfriends", component: FamilyfriendsComponent },
+  // { path: "familyfriends", component: FamilyfriendsComponent },
   // { path: 'user-profile',     component: ProfileComponent },
-  // { path: 'signup',           component: SignupComponent },
+  { path: "signup", component: SignupComponent },
   // { path: 'landing',          component: LandingComponent },
   // { path: 'nucleoicons',      component: NucleoiconsComponent }
 ];
