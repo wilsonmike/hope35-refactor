@@ -1,4 +1,5 @@
 .support-header {
+  margin-top: 2em;
   font-size: 2.5rem;
 }
 .title {
@@ -23,4 +24,27 @@
 }
 .cont-lightgray {
   background-color: antiquewhite;
+}
+.flexin-box {
+  display: flex;
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: #5680a0 !important;
+}
+
+.carousel-control-next-icon {
+  background-color: #5680a0;
+}
+
+@media screen and (max-width: 1100px) {
+  .flexin-box {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .carousel {
+    display: none;
+  }
 }

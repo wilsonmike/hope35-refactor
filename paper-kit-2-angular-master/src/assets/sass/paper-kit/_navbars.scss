@@ -49,7 +49,7 @@
       padding: 15px 0;
     }
     p:hover {
-      color: #000000 !important;
+      color: #152b3d !important;
     }
   }
   .navbar-nav {
@@ -209,7 +209,7 @@
   }
 
   .btn-default.btn-fill {
-    color: $dark-gray;
+    color: #152b3d;
     background-color: $white-color;
     @include opacity(0.9);
   }
