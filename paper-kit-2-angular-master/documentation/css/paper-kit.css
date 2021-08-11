@@ -2769,7 +2769,7 @@ textarea.form-control {
   cursor: pointer;
 }
 .navbar .navbar-toggler .navbar-toggler-bar {
-  background: #66615b;
+  background: #fff;
 }
 .navbar[class*="bg-"] .navbar-toggler .navbar-toggler-bar,
 .navbar.navbar-transparent .navbar-toggler .navbar-toggler-bar {

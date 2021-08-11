@@ -2,6 +2,17 @@
   margin-top: 2em;
   font-size: 2.5rem;
 }
+.hero::before {
+  content: "";
+  background-image: url("../../../assets/img/pastel.jpg");
+  background-size: cover;
+  position: absolute;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.55;
+}
 .title {
   color: #5680a0;
 }
@@ -15,23 +26,75 @@
 .arrow-container {
   align-items: center;
   text-align: center;
-  background-color: #eeeeee;
 }
 .down-arrow {
   height: 50px;
   width: 50px;
   cursor: pointer;
 }
-.cont-lightgray {
-  background-color: antiquewhite;
-}
 .flexin-box {
   display: flex;
 }
+.support-header {
+  font-weight: bold;
+  font-size: 2.5em;
+}
+.carousel {
+  background-color: transparent;
+  background: transparent;
+}
 
-.carousel-control-prev,
-.carousel-control-next {
-  background-color: #5680a0 !important;
+.img-fluid {
+  display: block;
+  overflow: visible;
+  width: 100%;
+  height: auto;
+  margin-right: auto;
+  margin-bottom: 12px;
+  margin-left: auto;
+  float: none;
+}
+.sec2-header {
+  font-weight: bold;
+  color: #5680a0;
+  font-size: 2em;
+}
+
+.floating {
+  animation: floating 5s ease infinite;
+  will-change: transform;
+}
+
+@keyframes floating {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.transform-perspective-right {
+  transform: scale(1) perspective(1040px) rotateY(-11deg) rotateX(2deg)
+    rotate(2deg);
+}
+.transform-perspective-left {
+  transform: scale(1) perspective(2000px) rotateY(11deg) rotateX(2deg)
+    rotate(-2deg);
+}
+
+.lander {
+  opacity: 80%;
+}
+
+.carousel-control-prev-icon {
+  background-image: url("https://apufpel.com.br/assets/img/seta_prim.png");
+}
+.carousel-control-next-icon {
+  background-image: url("https://apufpel.com.br/assets/img/seta_ult.png");
 }
 
 .carousel-control-next-icon {

@@ -1,4 +1,6 @@
 import { Component, OnInit } from "@angular/core";
+import { NgbCarouselConfig } from "@ng-bootstrap/ng-bootstrap";
+
 import { ViewChild } from "@angular/core";
 import {
   NgbCarousel,
@@ -14,53 +16,39 @@ import {
 export class HopehomeComponent implements OnInit {
   images = [
     {
-      imageURL: "../../../assets/img/ilya-yakover.jpg",
+      image: "../../../assets/img/broswer1.png",
     },
     {
-      imageURL: "../../../assets/img/bruno-abatti.jpg",
+      image: "../../../assets/img/browser5.png",
+    },
+    {
+      image: "../../../assets/img/browser2.png",
+    },
+    {
+      image: "../../../assets/img/browser6.png",
+    },
+    {
+      image: "../../../assets/img/browser3.png",
+    },
+    {
+      image: "../../../assets/img/browser4.png",
     },
   ];
 
-  paused = false;
-  unpauseOnArrow = false;
-  pauseOnIndicator = false;
-  pauseOnHover = true;
-  pauseOnFocus = true;
-
-  @ViewChild("carousel", { static: true }) carousel: NgbCarousel;
-
-  constructor() {}
-
-  togglePaused() {
-    if (this.paused) {
-      this.carousel.cycle();
-    } else {
-      this.carousel.pause();
-    }
-    this.paused = !this.paused;
-  }
-
-  onSlide(slideEvent: NgbSlideEvent) {
-    if (
-      this.unpauseOnArrow &&
-      slideEvent.paused &&
-      (slideEvent.source === NgbSlideEventSource.ARROW_LEFT ||
-        slideEvent.source === NgbSlideEventSource.ARROW_RIGHT)
-    ) {
-      this.togglePaused();
-    }
-    if (
-      this.pauseOnIndicator &&
-      !slideEvent.paused &&
-      slideEvent.source === NgbSlideEventSource.INDICATOR
-    ) {
-      this.togglePaused();
-    }
+  constructor(config: NgbCarouselConfig) {
+    config.interval = 3500;
+    config.wrap = true;
+    config.keyboard = false;
+    config.pauseOnHover = false;
   }
 
   ngOnInit(): void {}
 
   scroll(el: HTMLElement) {
-    el.scrollIntoView();
+    el.scrollIntoView({
+      behavior: "smooth",
+      block: "start",
+      inline: "nearest",
+    });
   }
 }

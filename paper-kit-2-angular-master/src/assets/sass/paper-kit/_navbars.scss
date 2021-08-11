@@ -325,7 +325,7 @@
   border: $none;
 
   .icon-bar {
-    background-color: red;
+    background-color: #fff;
   }
   .navbar-collapse,
   .navbar-form {
@@ -395,7 +395,7 @@
   cursor: pointer;
 
   .navbar & .navbar-toggler-bar {
-    background: $font-color;
+    background: #fff;
   }
 
   .navbar[class*="bg-"] & .navbar-toggler-bar,
@@ -425,7 +425,7 @@
   height: 2px;
   border-radius: 1px;
   margin: 0 auto;
-  background: gray;
+  background: #fff;
 }
 .no-transition {
   -webkit-transition: none;
