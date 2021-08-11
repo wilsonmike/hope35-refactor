@@ -13,6 +13,9 @@
   left: 0px;
   opacity: 0.55;
 }
+.form-start {
+  margin: 2% auto;
+}
 .title {
   color: #5680a0;
 }
