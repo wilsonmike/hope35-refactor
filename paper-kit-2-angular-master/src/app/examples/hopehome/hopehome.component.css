@@ -23,8 +23,27 @@
   border-color: #5680a0;
   color: #5680a0;
 }
+.about {
+  font-size: 10px;
+  text-transform: uppercase;
+  margin: 0;
+  color: #5680a0;
+  font-weight: bold;
+}
+.sub-main-tag {
+  font-size: 1.5em;
+}
+.about-list {
+  margin: 0 auto;
+  padding: 0;
+  list-style-type: none;
+  font-size: 1.5em;
+}
 .icon {
   color: #5680a0;
+}
+.motto {
+  margin-top: 2%;
 }
 .arrow-container {
   align-items: center;
@@ -39,8 +58,9 @@
   display: flex;
 }
 .support-header {
+  font-size: 2.3em;
+  width: 100%;
   font-weight: bold;
-  font-size: 2.5em;
 }
 .carousel {
   background-color: transparent;
@@ -59,8 +79,8 @@
 }
 .sec2-header {
   font-weight: bold;
-  color: #5680a0;
-  font-size: 2em;
+  font-size: 3em;
+  color: #292d34;
 }
 
 .floating {
