@@ -9,6 +9,11 @@ import { SignupComponent } from './signup/signup.component';
 import { HopehomeComponent } from './hopehome/hopehome.component';
 import { FamilyfriendsComponent } from './familyfriends/familyfriends.component';
 import { GetstartedComponent } from './getstarted/getstarted.component';
+import { AboutComponent } from './about/about.component';
+import { UploadManagerComponent } from './upload-manager/upload-manager.component';
+import { UploadTaskComponent } from './upload-task/upload-task.component';
+import { DropzoneDirective } from './directives/dropzone.directive';
+import { MainformControllerComponent } from './mainform-controller/mainform-controller.component';
 
 @NgModule({
     imports: [
@@ -22,7 +27,12 @@ import { GetstartedComponent } from './getstarted/getstarted.component';
         ProfileComponent,
         HopehomeComponent,
         FamilyfriendsComponent,
-        GetstartedComponent
+        GetstartedComponent,
+        AboutComponent,
+        UploadManagerComponent,
+        UploadTaskComponent,
+        DropzoneDirective,
+        MainformControllerComponent
     ]
 })
 export class ExamplesModule { }
