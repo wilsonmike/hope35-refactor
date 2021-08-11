@@ -1,0 +1,11 @@
+{
+  "targets": {
+    "hopeimage": {
+      "hosting": {
+        "pk2-angular": [
+          "hopeimage"
+        ]
+      }
+    }
+  }
+}

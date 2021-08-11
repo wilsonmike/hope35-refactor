@@ -1,3 +1,10 @@
-<app-navbar></app-navbar>
+<div
+  *ngIf="
+    !router.url.includes('familyfriends') && !router.url.includes('profile')
+  "
+  class="sidenav"
+>
+  <app-navbar></app-navbar>
+</div>
 <router-outlet></router-outlet>
 <app-footer></app-footer>
