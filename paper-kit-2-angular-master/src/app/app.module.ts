@@ -11,9 +11,15 @@ import { FooterComponent } from "./shared/footer/footer.component";
 
 import { ComponentsModule } from "./components/components.module";
 import { ExamplesModule } from "./examples/examples.module";
+import { ImagesComponent } from "./examples/images/images.component";
 
 @NgModule({
-  declarations: [AppComponent, NavbarComponent, FooterComponent],
+  declarations: [
+    AppComponent,
+    NavbarComponent,
+    ImagesComponent,
+    FooterComponent,
+  ],
   imports: [
     BrowserModule,
     NgbModule,
