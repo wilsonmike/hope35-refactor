@@ -1,10 +1,9 @@
 img {
   display: block;
-  max-width: 500px;
+  max-width: 300px;
   max-height: 500px;
   width: auto;
   height: auto;
-  margin: 2%;
 }
 
 .center {
@@ -13,6 +12,15 @@ img {
   width: 100%;
   justify-content: center;
   align-items: center;
+}
+
+.message {
+  padding: 3%;
+}
+
+.main {
+  display: flex;
+  flex-wrap: wrap;
 }
 
 /* .imagebox .imagebox-desc {
@@ -28,9 +36,24 @@ img {
   width: 100%;
 } */
 
-@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
-  .imagebox {
+@media only screen and (min-width: 920px) {
+  /* .center {
+    background-color: lightblue;
+  } */
+
+  img {
+    display: block;
+    max-width: 500px;
+    max-height: 700px;
+    width: auto;
+    height: auto;
+  }
+
+  .center {
     display: flex;
-    flex-direction: column;
+    margin: 0 auto;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
   }
 }
