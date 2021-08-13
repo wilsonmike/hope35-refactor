@@ -1,25 +1,13 @@
-.imagebox {
-  background: black;
-  padding: 0px;
-  position: relative;
-  text-align: center;
-  width: 100%;
-}
-
-.imagebox img {
-  opacity: 1;
-  transition: 0.5s opacity;
-}
-
 img {
   display: block;
   max-width: 500px;
   max-height: 500px;
   width: auto;
   height: auto;
+  margin: 2%;
 }
 
-.imagebox .imagebox-desc {
+/* .imagebox .imagebox-desc {
   background-color: rgba(0, 0, 0, 0.6);
   bottom: 0px;
   color: white;
@@ -30,12 +18,18 @@ img {
   transition: 0.5s padding;
   text-align: center;
   width: 100%;
+} */
+
+.banner {
+  margin: 0 auto;
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
 }
 
-.imagebox:hover img {
-  opacity: 0.7;
-}
-
-.imagebox:hover .imagebox-desc {
-  padding-bottom: 10%;
+@media only screen and (min-device-width: 768px) and (max-device-width: 1024px) and (-webkit-min-device-pixel-ratio: 1) {
+  .imagebox {
+    display: flex;
+    flex-direction: column;
+  }
 }

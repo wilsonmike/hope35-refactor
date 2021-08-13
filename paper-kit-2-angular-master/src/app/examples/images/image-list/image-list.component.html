@@ -1,22 +1,22 @@
-<table *ngIf="imageList">
-  <tr *ngFor="let i of rowIndexArray">
-    <td>
+<div *ngIf="imageList">
+  <div class="banner" *ngFor="let i of rowIndexArray">
+    <div>
       <div class="imagebox">
-        <img class="img-fluid" [src]="imageList[3 * i].imageUrl" />
-        <span class="imagebox-desc">{{ imageList[3 * i].caption }}</span>
+        <img class="img-fluid col-md-6" [src]="imageList[3 * i].imageUrl" />
       </div>
-    </td>
-    <td *ngIf="imageList[3 * i + 1].imageUrl">
+      <span class="imagebox-desc col-md-6">{{ imageList[3 * i].caption }}</span>
+    </div>
+    <div *ngIf="imageList[3 * i + 1]">
       <div class="imagebox">
         <img class="img-fluid" [src]="imageList[3 * i + 1].imageUrl" />
         <span class="imagebox-desc">{{ imageList[3 * i + 1].caption }}</span>
       </div>
-    </td>
-    <td *ngIf="imageList[3 * i + 2].imageUrl">
+    </div>
+    <div *ngIf="imageList[3 * i + 2]">
       <div class="imagebox">
         <img class="img-fluid" [src]="imageList[3 * i + 2].imageUrl" />
         <span class="imagebox-desc">{{ imageList[3 * i + 2].caption }}</span>
       </div>
-    </td>
-  </tr>
-</table>
+    </div>
+  </div>
+</div>
