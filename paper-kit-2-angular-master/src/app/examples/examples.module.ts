@@ -12,9 +12,6 @@ import { GetstartedComponent } from "./getstarted/getstarted.component";
 import { AboutComponent } from "./about/about.component";
 import { DropzoneDirective } from "./directives/dropzone.directive";
 import { MainformControllerComponent } from "./mainform-controller/mainform-controller.component";
-import { ImagesComponent } from "./images/images.component";
-import { ImageComponent } from './images/image/image.component';
-import { ImageListComponent } from './images/image-list/image-list.component';
 
 @NgModule({
   imports: [CommonModule, FormsModule, NgbModule],
@@ -28,9 +25,6 @@ import { ImageListComponent } from './images/image-list/image-list.component';
     AboutComponent,
     DropzoneDirective,
     MainformControllerComponent,
-    ImagesComponent,
-    ImageComponent,
-    ImageListComponent,
   ],
 })
 export class ExamplesModule {}

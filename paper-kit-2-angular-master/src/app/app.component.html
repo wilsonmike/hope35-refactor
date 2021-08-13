@@ -1,6 +1,10 @@
 <div
   *ngIf="
-    !router.url.includes('familyfriends') && !router.url.includes('profile')
+    !router.url.includes('familyfriends') &&
+    !router.url.includes('profile') &&
+    !router.url.includes('upload') &&
+    !router.url.includes('list') &&
+    !router.url.includes('image')
   "
   class="sidenav"
 >
