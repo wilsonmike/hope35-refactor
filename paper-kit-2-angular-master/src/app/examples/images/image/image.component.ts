@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { AngularFireStorage } from "@angular/fire/storage";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
 
 @Component({
@@ -16,7 +17,7 @@ export class ImageComponent implements OnInit {
     imageUrl: new FormControl("", Validators.required),
   });
 
-  constructor() {}
+  constructor(private storage: AngularFireStorage) {}
 
   ngOnInit(): void {}
 
@@ -34,6 +35,15 @@ export class ImageComponent implements OnInit {
 
   onSubmit(formValue) {
     this.isSubmitted = true;
+    if (this.formTemplate.valid) {
+      const filePath = `newHope/${
+        this.selectedImage.name
+      }_${new Date().getTime()}`;
+      this.storage
+        .upload(filePath, this.selectedImage)
+        .snapshotChanges()
+        .subscribe();
+    }
   }
 
   get formControls() {
