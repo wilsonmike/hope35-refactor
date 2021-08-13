@@ -1,1 +1,22 @@
-<p>image-list works!</p>
+<table *ngIf="imageList">
+  <tr *ngFor="let i of rowIndexArray">
+    <td>
+      <div class="imagebox">
+        <img class="img-fluid" [src]="imageList[3 * i].imageUrl" />
+        <span class="imagebox-desc">{{ imageList[3 * i].caption }}</span>
+      </div>
+    </td>
+    <td *ngIf="imageList[3 * i + 1].imageUrl">
+      <div class="imagebox">
+        <img class="img-fluid" [src]="imageList[3 * i + 1].imageUrl" />
+        <span class="imagebox-desc">{{ imageList[3 * i + 1].caption }}</span>
+      </div>
+    </td>
+    <td *ngIf="imageList[3 * i + 2].imageUrl">
+      <div class="imagebox">
+        <img class="img-fluid" [src]="imageList[3 * i + 2].imageUrl" />
+        <span class="imagebox-desc">{{ imageList[3 * i + 2].caption }}</span>
+      </div>
+    </td>
+  </tr>
+</table>
