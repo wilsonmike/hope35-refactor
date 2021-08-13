@@ -1,6 +1,7 @@
 import { Component, OnInit } from "@angular/core";
 import { AngularFireStorage } from "@angular/fire/storage";
 import { FormControl, FormGroup, Validators } from "@angular/forms";
+import { finalize } from "rxjs/operators";
 
 @Component({
   selector: "app-image",
@@ -8,9 +9,9 @@ import { FormControl, FormGroup, Validators } from "@angular/forms";
   styleUrls: ["./image.component.css"],
 })
 export class ImageComponent implements OnInit {
-  imgSrc = "../../../../assets/img/photouploader.svg";
+  imgSrc: string;
   selectedImage: any = null;
-  isSubmitted: boolean = false;
+  isSubmitted: boolean;
   formTemplate = new FormGroup({
     caption: new FormControl("", Validators.required),
     category: new FormControl(""),
@@ -19,7 +20,9 @@ export class ImageComponent implements OnInit {
 
   constructor(private storage: AngularFireStorage) {}
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.resetForm();
+  }
 
   showPreview(event: any) {
     if (event.target.files && event.target.files[0]) {
@@ -39,14 +42,34 @@ export class ImageComponent implements OnInit {
       const filePath = `newHope/${
         this.selectedImage.name
       }_${new Date().getTime()}`;
+      const fileRef = this.storage.ref(filePath);
       this.storage
         .upload(filePath, this.selectedImage)
         .snapshotChanges()
+        .pipe(
+          finalize(() => {
+            fileRef.getDownloadURL().subscribe((url) => {
+              formValue["imageUrl"] = url;
+              this.resetForm();
+            });
+          })
+        )
         .subscribe();
     }
   }
 
   get formControls() {
     return this.formTemplate["controls"];
+  }
+  resetForm() {
+    this.formTemplate.reset();
+    this.formTemplate.setValue({
+      caption: "",
+      imageUrl: "",
+      category: "",
+    });
+    this.imgSrc = "../../../../assets/img/photouploader.svg";
+    this.selectedImage = null;
+    this.isSubmitted = false;
   }
 }
