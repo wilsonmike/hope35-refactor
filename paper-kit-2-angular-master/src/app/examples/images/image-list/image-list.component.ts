@@ -19,6 +19,7 @@ export class ImageListComponent implements OnInit {
       this.rowIndexArray = Array.from(
         Array(Math.ceil(this.imageList.length / 3)).keys()
       );
+      console.log(this.imageList);
     });
   }
 }
