@@ -1,4 +1,9 @@
 .header {
-  background: #5680a0;
-  background-blend-mode: soft-light;
+  background: url(../../../assets/img/jsunny.jpg);
+  background-blend-mode: screen;
+  background-color: #5b85a4;
+  height: 100%;
+  width: 100%;
+  margin: 0;
+  padding: 0;
 }
