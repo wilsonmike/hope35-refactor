@@ -1,22 +1,29 @@
-<div class="card" style="width: 25rem">
+<div class="card main-form" style="width: 30rem">
   <div class="card-body">
     <form [formGroup]="formTemplate" (submit)="onSubmit(formTemplate.value)">
       <img
+        class="form-imager"
         [src]="imgSrc"
-        width="350px"
-        height="250px"
+        max-width="500px"
+        max-height="500px"
         (click)="fileUploader.click()"
         alt=""
       />
       <div class="form-group">
-        <label>Select file to upload</label>
-        <input
-          type="file"
-          #fileUploader
-          class="form-control"
-          formControlName="imageUrl"
-          (change)="showPreview($event)"
-        />
+        <label
+          class="btn btn-primary btn-block float-left picker"
+          for="upload-photo"
+        >
+          <input
+            type="file"
+            #fileUploader
+            id="upload-photo"
+            class="form-control hide_file"
+            formControlName="imageUrl"
+            (change)="showPreview($event)"
+          />
+          Select file to upload
+        </label>
         <div
           class="text-danger"
           *ngIf="isSubmitted && formControls.imageUrl.errors?.required"
@@ -27,7 +34,7 @@
       <div class="form-group">
         <input
           type="text"
-          class="form-control"
+          class="form-control caption-control"
           formControlName="caption"
           placeholder="Caption"
         />

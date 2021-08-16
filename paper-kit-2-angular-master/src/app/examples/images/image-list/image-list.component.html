@@ -1,6 +1,10 @@
-<div class="center" *ngFor="let i of imageList">
+<div
+  class="center"
+  *ngFor="let i of imageList; let index = index; first as isFirst"
+  [class.first]="isFirst"
+>
   <div class="row">
-    <div class="col-md-6">
+    <div>
       <div class="card">
         <img src="{{ i.imageUrl }}" alt="" />
         <div class="card-body">
