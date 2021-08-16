@@ -56,11 +56,6 @@ img {
     height: auto;
     object-fit: cover;
   }
-
-  .row {
-    margin: 0 auto;
-  }
-
   .center {
     display: flex;
     margin: 0 auto;
